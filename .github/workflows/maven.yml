@@ -24,7 +24,9 @@ jobs:
           cache: maven
 
       - name: Run Maven tests
-        run: mvn --batch-mode test
+  working-directory: SunriseDentalClinic
+  run: mvn --batch-mode test
 
-      - name: Build Maven project
-        run: mvn --batch-mode package
+- name: Build Maven project
+  working-directory: SunriseDentalClinic
+  run: mvn --batch-mode package
